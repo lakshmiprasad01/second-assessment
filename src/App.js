@@ -28,6 +28,13 @@ import React, { Component } from 'react'
  class App extends Component {
 
   render() {
+   const state ={
+      name : 'Lakshmiprasad M',
+      occupation :'Software Engineer',
+      employeeNo :'E00227',
+      email :'prasad.malakala@gmail.com',
+      mobileNo:'9494892021'
+   }
      const clckHAndler = ()=>{
         document.querySelector(".pCard_card").classList.toggle("pCard_on");
         document.querySelector(".pCard_add i").classList.toggle("fa-minus");
@@ -36,23 +43,23 @@ import React, { Component } from 'react'
       <div class="pCard_card">
    <div class="pCard_up">
       <div class="pCard_text">
-         <h2>Lakshmiprasad M</h2>
-         <p> Software Engineer</p>
+         <h2>{state.name}</h2>
+         <p>{state.occupation} </p>
       </div>
       <div class="pCard_add" onClick={clckHAndler}><i class="fa fa-plus"></i></div>
    </div>
    <div class="pCard_down">
       <div>
          <p>Employee No</p>
-         <p>E00227</p>
+         <p>{state.employeeNo}</p>
       </div>
       <div>
          <p>Email</p>
-         <p>prasad.malakala@gmail.com</p>
+         <p>{state.email}</p>
       </div>
       <div>
          <p>Mobile No</p>
-         <p>9494892021</p>
+         <p>{state.mobileNo}</p>
       </div>
    </div>
    <div class="pCard_back">
